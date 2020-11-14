@@ -10,8 +10,7 @@ const bodyParse = require("body-parser");
 const axios = require("axios");
 const { response } = require("express");
 
-// 871791691479-qtnk7rruts6mcovmrpoie5r2ir0aq28l.apps.googleusercontent.com
-// key secret client: we4cSuArKS7CDHyhbH8eBiuE
+
 
 app.use(cors());
 app.use(bodyParse.urlencoded({ extended: true }));
@@ -20,9 +19,9 @@ app.use(bodyParse.json());
 app.get("/getURLTing", (req, res) => {
     const oauth2Client = new google.auth.OAuth2(
         // client ID
-        "871791691479-qtnk7rruts6mcovmrpoie5r2ir0aq28l.apps.googleusercontent.com",
+        "",
         // client secret
-        "we4cSuArKS7CDHyhbH8eBiuE",
+        "",
         // link to redirect
         "http://localhost:1234/steps"
     );
@@ -53,9 +52,9 @@ app.get("/steps", async (req,res) => {
     const code = queryParse.parse(queryURL.query).code;
     const oauth2Client = new google.auth.OAuth2(
         // client ID
-        "871791691479-qtnk7rruts6mcovmrpoie5r2ir0aq28l.apps.googleusercontent.com",
+        "",
         // client secret
-        "we4cSuArKS7CDHyhbH8eBiuE",
+        "",
         // link to redirect
         "http://localhost:1234/steps"
     );
